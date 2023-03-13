@@ -1,0 +1,28 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 80px;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  width: 50%;
+  padding: 20px;
+  padding-top: 20px;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.footer_icon {
+  margin-right: 15px;
+}
+.footer_icon:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.2) !important;
+}
+.footer_left .footer_icon {
+  background-color: rgb(242, 243, 254);
+  border-radius: 8px;
+  padding: 5px;
+}
+.footer_left {
+  padding-top: 10px;
+}

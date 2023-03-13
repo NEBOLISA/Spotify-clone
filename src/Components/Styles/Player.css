@@ -1,0 +1,11 @@
+body {
+  background-color: white;
+}
+.player_body {
+  display: grid;
+  grid-template-columns: 20% 1fr 20%;
+}
+.footer_wrapper {
+  display: grid;
+  place-items: center;
+}

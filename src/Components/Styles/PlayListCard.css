@@ -1,0 +1,20 @@
+.playlistcard {
+  background-color: aqua;
+  background: linear-gradient(aqua, rgb(174, 179, 232));
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.playlistcard:hover {
+  cursor: pointer;
+}
+img {
+  width: 100px;
+}
+.playlist_details1 {
+}
+.playlist_details {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}

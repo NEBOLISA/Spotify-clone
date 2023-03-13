@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+}
+.login {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: black;
+}
+/*
+#1db954
+*/
+.login > a {
+  background-color: #040404;
+  border-radius: 99px;
+  padding: 20px;
+  font-weight: bolder;
+  color: white;
+  border: 1px solid #1db954;
+  text-decoration: none;
+}
+.login > a:hover {
+  background-color: #1db954;
+}
+.login > img {
+  width: 30%;
+}

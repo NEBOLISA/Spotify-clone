@@ -1,0 +1,50 @@
+.playlist {
+  margin-top: 20px;
+  height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 120px;
+}
+.title_wrapper {
+  display: flex;
+}
+.playlist_title {
+  margin-right: auto;
+}
+.playlist_info {
+}
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.playlist_header {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr 1fr 0.5fr;
+  color: gray;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  place-items: center;
+}
+.artistName {
+  text-align: center;
+}
+.album {
+  text-align: center;
+}
+.song_details {
+  border: 0.5px solid rgb(224, 224, 224);
+  display: grid;
+  padding-left: 10px;
+  grid-template-columns: 0.5fr 1fr 0.5fr 1fr 0.5fr;
+  margin-bottom: 4px;
+  place-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+}
+.song_details:hover {
+  background-color: white;
+}
+.title_wrapper > p:hover {
+  cursor: pointer;
+}

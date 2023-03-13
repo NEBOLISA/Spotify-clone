@@ -1,0 +1,22 @@
+.sidebarOption {
+  color: rgb(75, 75, 75);
+  height: 40px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 75%;
+  transition: 200ms color ease-in;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 30px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.sidebarOption:hover {
+  color: white;
+  background-color: black;
+  border-radius: 8px;
+}
