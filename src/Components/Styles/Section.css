@@ -4,3 +4,17 @@
   padding: 30px;
   background-color: rgb(242, 243, 254);
 }
+.logout_button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+.logout_button:hover {
+  background-color: transparent;
+  border: 1px solid black;
+  cursor: pointer;
+  color: black;
+}
