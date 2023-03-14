@@ -1,5 +1,7 @@
+import { redirect } from "react-router-dom";
+
 export const signupEndpoint = "https://accounts.spotify.com/authorize";
-const redirectUri = "https://nebolisa.github.io/Spotify-clone2/";
+const redirectUri = "http://localhost:3000/";
 const clientId = "7918759ef3f848f09946f4956f2943ef";
 const scopes = [
   "user-read-currently-playing",
@@ -18,6 +20,7 @@ export const loginUrl = `${signupEndpoint}?client_id=${clientId}&redirect_uri=${
 )}&response_type=token&show_dialog=true`;
 
 export const getTokenFromUrl = () => {
+  console.log(redirectUri);
   let token = window.location.hash
     .substring(1)
     .split("&")
