@@ -19,17 +19,23 @@ function Footer() {
   const [{ token, playerState }, dispatch] = useServiceProviderValue();
   const changeState = async () => {
     const state = playerState ? "pause" : "play";
-    await axios.put(`https://api.spotify.com/v1/me/player/${state}`, {
-      headers: {
-        Authorization: "Bearer " + token,
-        "Content-Type": "application/json",
-      },
-    });
+    await axios.put(
+      `https://api.spotify.com/v1/me/player/${state}`,
+      {},
+      {
+        headers: {
+          Authorization: "Bearer " + token,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
     dispatch({
       type: "SET_PLAYER_STATE",
       playerState: !playerState,
     });
   };
+
   const changeTrack = async (type) => {
     await axios.post(
       `https://api.spotify.com/v1/me/player/${type}`,
@@ -63,6 +69,7 @@ function Footer() {
       dispatch({ type: "SET_PLAYING", currentPlaying: null });
     }
   };
+
   return (
     <div className="footer">
       <div className="footer_left">
