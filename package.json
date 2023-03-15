@@ -1,7 +1,7 @@
 {
   "name": "spotify-clone",
   "version": "0.1.0",
-  "homepage": "https://nebolisa.github.io/kc2",
+  "homepage": "https://nebolisa.github.io/Spotify-clone2",
   "private": true,
   "dependencies": {
     "@material-ui/icons": "^4.11.3",
