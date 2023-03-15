@@ -1,7 +1,7 @@
 import { redirect } from "react-router-dom";
 
 export const signupEndpoint = "https://accounts.spotify.com/authorize";
-const redirectUri = "https://nebolisa.github.io/kc2/";
+const redirectUri = "https://nebolisa.github.io/kc/";
 const clientId = "7918759ef3f848f09946f4956f2943ef";
 const scopes = [
   "user-read-currently-playing",
