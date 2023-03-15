@@ -5,6 +5,7 @@ import axios from "axios";
 
 function Section() {
   const [{ token }, dispatch] = useServiceProviderValue();
+  /* 
   useEffect(() => {
     const getCategories = async () => {
       const response = await axios.get(
@@ -21,10 +22,12 @@ function Section() {
       /*dispatch({
         type: "CATEGORIES",
         category: response.data.items[1].name,
-      });*/
+      });
     };
     getCategories();
   }, [token, dispatch]);
+ 
+  };*/
   const logout = () => {
     dispatch({
       type: "SET_TOKEN",
