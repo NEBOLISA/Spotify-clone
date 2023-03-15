@@ -3,7 +3,13 @@ import "./Styles/Main.css";
 import SearchIcon from "@material-ui/icons/Search";
 import Trending from "./Trending";
 import PlayList from "./PlayList";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter,
+  HashRouter,
+  Link,
+  Route,
+  Routes,
+} from "react-router-dom";
 import AllPlayLists from "./AllPlayLists";
 import { useServiceProviderValue } from "../ServiceProvider";
 import PlayListTracks from "./PlayListTracks";
@@ -12,7 +18,7 @@ function Main() {
   const [{ token, playlists, user }] = useServiceProviderValue();
   //const id = playlists.items[0].id;
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route
           path="/"
@@ -37,7 +43,7 @@ function Main() {
 
         <Route path="playlisttracks" element={<PlayListTracks />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
