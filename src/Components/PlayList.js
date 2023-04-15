@@ -16,7 +16,6 @@ function PlayList() {
     context_uri,
     track_number
   ) => {
-    console.log("PlayList:" + token);
     const response = await axios.put(
       `https://api.spotify.com/v1/me/player/play`,
       {
@@ -58,6 +57,7 @@ function PlayList() {
           },
         }
       );
+
       dispatch({
         type: "DEFAULT_PLAYLIST",
         playlistName: response.data.items[1].name,
@@ -74,7 +74,6 @@ function PlayList() {
       );
 
       setTracks(response1.data);
-      console.log(response1.data);
     };
     getTracks();
   }, [token, dispatch]);
@@ -122,11 +121,12 @@ function PlayList() {
             >
               <p>{id + 1}</p>
               <p>{items?.track?.name}</p>
-              <p className="artistName">
-                {items?.track?.artists.map((artist) => (
-                  <p>{artist.name}</p>
-                ))}
-              </p>
+
+              {items?.track?.artists.map((artist, id) => (
+                <p className="artistName" key={`artist-${id}`}>
+                  {artist.name}
+                </p>
+              ))}
 
               <p>
                 {msToMinutesAndSecs(items?.track?.duration_ms)}

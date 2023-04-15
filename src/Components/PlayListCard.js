@@ -4,28 +4,14 @@ import axios from "axios";
 import { useServiceProviderValue } from "../ServiceProvider";
 import "./Styles/PlayListCard.css";
 
-function PlayListCard({ playlist, id }) {
+function PlayListCard({ playlist, id, onClick }) {
   const [{ user, token }, dispatch] = useServiceProviderValue();
   const { name, images } = playlist;
   console.log(id);
-  const displayTracks = async () => {
-    const response = await axios.get(
-      `https://api.spotify.com/v1/playlists/${id}/tracks`,
-      {
-        headers: {
-          Authorization: "Bearer " + token,
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    dispatch({
-      type: "SELECTED_PLAYLIST_TRACKS",
-      tracks: response.data,
-    });
-  };
+  
 
   return (
-    <div className="playlistcard" onClick={displayTracks}>
+    <div className="playlistcard" onClick={onClick}>
       <img src={images.length !== 0 ? images[0].url : profile} alt={name} />
       <h1 className="playlist_name">{name}</h1>
       <div className="playlist_details">

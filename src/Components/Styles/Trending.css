@@ -9,10 +9,18 @@
 }
 .trending_song_div {
   padding: 35px 20px 20px 20px;
-
+  background: linear-gradient(rgb(0, 166, 255), rgb(165, 221, 223));
   border-radius: 20px;
-  border: 1px solid blue;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+.trending_img {
+  width: 150px;
+  height: 150px;
+}
+
 .artist_name {
   margin-bottom: 10px;
 }

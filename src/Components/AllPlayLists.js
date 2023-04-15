@@ -8,9 +8,9 @@ import PlayListCard from "./PlayListCard";
 import PlayListTracks from "./PlayListTracks";
 import { Link } from "react-router-dom";
 function AllPlayLists() {
-  const [{ token, playlists }] = useServiceProviderValue();
+  const [{ token, playlists, dispatch }] = useServiceProviderValue();
   const { id } = playlists;
-
+  const displayTracks = async () => {};
   return (
     <div className="allplaylist">
       <Link to="/" className="link">
@@ -19,7 +19,25 @@ function AllPlayLists() {
       {playlists?.items?.map((playlist) => (
         <div className="playlistcards">
           <Link to="/playlisttracks" className="link">
-            <PlayListCard playlist={playlist} id={playlist.id} />
+            <PlayListCard
+              onClick={async () => {
+                const response = await axios.get(
+                  `https://api.spotify.com/v1/playlists/${playlist.id}/tracks`,
+                  {
+                    headers: {
+                      Authorization: "Bearer " + token,
+                      "Content-Type": "application/json",
+                    },
+                  }
+                );
+                dispatch({
+                  type: "SELECTED_PLAYLIST_TRACKS",
+                  tracks: response.data,
+                });
+              }}
+              playlist={playlist}
+              id={playlist.id}
+            />
           </Link>
         </div>
       ))}

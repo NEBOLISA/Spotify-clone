@@ -3,45 +3,50 @@ import { useServiceProviderValue } from "../ServiceProvider";
 import "./Styles/Section.css";
 import axios from "axios";
 
+import SectionCard from "./SectionCard";
+import Dropdown from "./Dropdown";
+
 function Section() {
   const [{ token }, dispatch] = useServiceProviderValue();
-  /* 
+  const [{ user }] = useServiceProviderValue();
+  const options = [
+    { value: "Account", id: 0 },
+    { value: "Profile", id: 1 },
+    { value: "Settings", id: 2 },
+    { value: "Logout", id: 3 },
+  ];
+
   useEffect(() => {
     const getCategories = async () => {
       const response = await axios.get(
-        `https://api.spotify.com/v1/browse/categories`,
-
+        `	https://api.spotify.com/v1/browse/categories`,
         {
           headers: {
+            Accept: "application/json",
             Authorization: "Bearer " + token,
             "Content-Type": "application/json",
           },
         }
       );
-      console.log("Categories" + response.data);
-      /*dispatch({
-        type: "CATEGORIES",
-        category: response.data.items[1].name,
+      console.log(response);
+      dispatch({
+        type: "SET_CATEGORIES",
+        category: response.data.categories.items,
       });
     };
     getCategories();
-  }, [token, dispatch]);
- 
-  };*/
-  const logout = () => {
-    dispatch({
-      type: "SET_TOKEN",
-      token: "",
-    });
-  };
+  }, []);
+
   return (
     <div className="section">
-      <h1>Shortcuts</h1>
-      <button className="logout_button" onClick={logout}>
+      <h2 className="section_title">Shortcuts</h2>
+      <Dropdown options={options} />
+
+      {/*<button className="logout_button" onClick={logout}> 
         Logout
-      </button>
+  </button>*/}
+      <SectionCard />
     </div>
   );
 }
-
 export default Section;

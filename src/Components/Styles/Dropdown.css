@@ -1,0 +1,33 @@
+.dropdown_icon_div {
+  background-color: transparent;
+  border: 3px solid white;
+  color: black;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 4px;
+  display: flex;
+  margin-bottom: 10px;
+  gap: 8px;
+  width: fit-content;
+}
+.dropdown_icon_div:hover {
+  cursor: pointer;
+}
+
+.dropdown_menu {
+  width: 80%;
+  border-radius: 8px;
+  padding: 4px;
+  background-color: gray;
+  margin-bottom: 10px;
+}
+.dropdown_item {
+  padding: 10px;
+  padding-right: 30px;
+  color: white;
+}
+.dropdown_item:hover {
+  cursor: pointer;
+  background-color: rgb(67, 65, 65);
+  color: white;
+}
