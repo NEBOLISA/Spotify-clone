@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Spotify-clone/static/css/main.b5c10c2d.css",
-    "main.js": "/Spotify-clone/static/js/main.7ffcffff.js",
+    "main.css": "/Spotify-clone/static/css/main.c55d0610.css",
+    "main.js": "/Spotify-clone/static/js/main.6f181a7e.js",
     "static/js/787.a142c313.chunk.js": "/Spotify-clone/static/js/787.a142c313.chunk.js",
     "static/media/logo2.png": "/Spotify-clone/static/media/logo2.8cf30357f68ecd43ba5d.png",
     "static/media/Spotifylogo.jpg": "/Spotify-clone/static/media/Spotifylogo.ccb63f937c34b79b2718.jpg",
     "static/media/avater.png": "/Spotify-clone/static/media/avater.a020bfe24e7b7983185b.png",
     "index.html": "/Spotify-clone/index.html",
-    "main.b5c10c2d.css.map": "/Spotify-clone/static/css/main.b5c10c2d.css.map",
-    "main.7ffcffff.js.map": "/Spotify-clone/static/js/main.7ffcffff.js.map",
+    "main.c55d0610.css.map": "/Spotify-clone/static/css/main.c55d0610.css.map",
+    "main.6f181a7e.js.map": "/Spotify-clone/static/js/main.6f181a7e.js.map",
     "787.a142c313.chunk.js.map": "/Spotify-clone/static/js/787.a142c313.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5c10c2d.css",
-    "static/js/main.7ffcffff.js"
+    "static/css/main.c55d0610.css",
+    "static/js/main.6f181a7e.js"
   ]
 }
